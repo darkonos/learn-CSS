@@ -1,0 +1,82 @@
+/* Tous ce qui est utile à connaître en CSS 
+Tjrs se mettre dans l'ordre dans lequel on descend dans le document */
+
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+/* 1.TEXTE */
+
+/* Utilisation d'une police importé de google fonts, select this style puis @import */
+/* Soit on utilise le lien web ou on download les polices au cas si un jour le lien ne fontionne plus */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,200&display=swap');
+
+/* Police download */
+/* C'est mieux de l'appeler font-1 que Roboto-Black.ttf */
+@font-face {
+    font-family: font-1;
+    src: url(assets/font/Roboto-Black.ttf);
+}
+
+body {
+    font-family: font-1, serif;
+
+    /* 2. BACKGROUND */
+
+    /* Pour de meilleurs performance il faut intégré le background par le css et non par le html*/
+    background: url(./assets/img/sunset.jpg) no-repeat fixed center/cover;
+    height: 100vh; /* 100 virtual height, l'image prend 100% de l'écran*/
+}
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+    color: rgb(226, 60, 115);
+    text-shadow: 2px 1px 1px #8fc95a; /*Abcisse, Ordonné, blur (Floutage), color, Se rendre dans l'inspecteur pour de meilleur réglages */
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+ /* 3. BOX */
+
+main {
+    background: whitesmoke;
+    width: 85%; /*tjrs en % car tous les écrans sont différents*/
+    min-height: 500px; /*tjrs en px pour la hauteur*/
+    margin: 20px 10px;
+    padding: 10px 10px ;
+    border-radius: 10px;
+    box-shadow: 3px -2px 0 rgb(237, 150, 255); /*utilise l'inspecteur*/
+}
+
+/* 4. POSITIONING (positionner manuellement les éléments) */
+
+.positioning {
+    border: 2px solid skyblue; /*Pour matérialiser notre division*/
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#circle {
+    height: 60px;
+    width: 60px;
+    background: skyblue;
+    padding: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: 110px;
+}
+
+#rectangle {
+    height: 15px;
+    width: 100px;
+    background: 20px;
+    padding: 20px;
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+}
