@@ -51,13 +51,14 @@ main {
     box-shadow: 3px -2px 0 rgb(237, 150, 255); /*utilise l'inspecteur*/
 }
 
-/* 4. POSITIONING (positionner manuellement les éléments) */
+/* 4. POSITIONING (positionner manuellement des éléments sur la page) */
 
 .positioning {
     border: 2px solid skyblue; /*Pour matérialiser notre division*/
     margin-top: 20px;
     padding: 10px;
     border-radius: 10px;
+    position: relative;
 }
 
 #circle {
@@ -67,16 +68,27 @@ main {
     padding: 20px;
     border-radius: 50%;
     position: absolute;
-    top: -10px;
-    right: 110px;
+    top: 0px;
+    right: 0px;
+    z-index: 0;
+    
 }
+ /* Si on souhaite centrer notre boite #retangle sur l'axe des X et y en position absolute il faut
+  savoir que CCS centre les éléments en absolute à partir du bout à gauche de la boite #rectangle
+  pour régler ce problème, on utilise la propriété transform */
 
 #rectangle {
     height: 15px;
     width: 100px;
-    background: 20px;
+    background: blue;
     padding: 20px;
     position: absolute;
-    bottom: 8px;
+    top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
+
+
+/* 5. FLEXBOX */
+
